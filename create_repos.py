@@ -14,10 +14,15 @@ data = json.load(f)
 g = Github(data["key"])
 org = g.get_organization(data["organization"])
 groups = data["number_of_groups"]
+vis = data["visibility"]
+if vis=="private":
+    visibility = True
+elif vis=="public":
+    visibility = False
 
 
 for i in range(1,groups+1):
     time.sleep(0.5)
     # Create the repo
-    org.create_repo(data["template_repo_name"] + str(i),private=True)
+    org.create_repo(data["template_repo_name"] + str(i),private=visibility)
     print("Created " + data["template_repo_name"] + str(i) + "Repo")
