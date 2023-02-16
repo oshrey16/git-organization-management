@@ -1,0 +1,8 @@
+{
+   "key":"EnterYourKey",
+   "organization":"EnterGitOrganizationname",
+   "number_of_groups":20,
+   "template_team_name":"PM_TEAM_",
+   "template_repo_name":"PM_REPO_",
+   "visibility":"private"
+}
